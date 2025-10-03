@@ -1,0 +1,107 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", monospace;
+    color: #fff;
+}
+
+.sea-background {
+    background: linear-gradient(to bottom, #001f3f, #003366);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #004488;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #004488;
+    border: 2px solid #00aaff;
+    color: white;
+    padding: 12px 25px;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00aaff;
+    border-color: #66ccff;
+    transform: scale(1.1);
+}
+
+/* Игровое поле */
+.boards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.board-container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 2px;
+    margin: 10px auto;
+    width: max-content;
+}
+
+.board div {
+    width: 40px;
+    height: 40px;
+    background: #006699;
+    border: 1px solid #003366;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.board div:hover {
+    background: #00aaff;
+}
+
+/* панель выбора кораблей */
+.ship-panel {
+    margin-top: 15px;
+}
+
+.ship-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    background: #002244;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.ship-list li {
+    margin: 5px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ship-list li:hover {
+    color: #00aaff;
+}

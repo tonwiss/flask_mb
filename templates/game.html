@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Морской Бой — Играть</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/game.js') }}"></script>
+</head>
+<body class="sea-background">
+    <!-- кнопка назад -->
+    <a href="/menu" class="btn top-right">⬅ Меню</a>
+
+    <!-- код игры -->
+    <div id="game-code-display" class="top-left"></div>
+
+    <div class="container">
+        <h1 class="title">Поле битвы</h1>
+        <div id="timer" class="top-center">Время: 02:00</div>
+        <div class="boards">
+            <!-- твое поле -->
+            <div class="board-container">
+                <h2>Твое поле</h2>
+                <div id="my-board" class="board"></div>
+                <div class="ship-panel">
+                    <button id="ship-select" class="btn">Выбор кораблей ⚓</button>
+                    <ul id="ship-list" class="ship-list">
+                        <li data-size="4">4-палубный: <span id="count-4">1</span></li>
+                        <li data-size="3">3-палубный: <span id="count-3">2</span></li>
+                        <li data-size="2">2-палубный: <span id="count-2">3</span></li>
+                        <li data-size="1">1-палубный: <span id="count-1">4</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- поле противника -->
+            <div class="board-container">
+                <h2>Поле противника</h2>
+                <div id="enemy-board" class="board"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
