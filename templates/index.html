@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Морской Бой — Главная</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="sea-background">
+    <div class="container">
+        <h1 class="title">⚓ Морской Бой ⚓</h1>
+
+        {% if current_user.is_authenticated %}
+            <div class="stats top-left">
+                <p>Игрок: {{ current_user.username }}</p>
+                <p>Победы: {{ current_user.wins }}</p>
+                <p>Поражения: {{ current_user.losses }}</p>
+                <p>Игр всего: {{ current_user.wins + current_user.losses }}</p>
+            </div>
+            <a href="/menu" class="btn">Начать игру</a>
+            <a href="/logout" class="btn">Выйти</a>
+        {% else %}
+            <a href="/login" class="btn">Вход</a>
+            <a href="/register" class="btn">Регистрация</a>
+        {% endif %}
+    </div>
+</body>
+</html>

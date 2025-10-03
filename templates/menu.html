@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Морской Бой — Меню</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/menu.js') }}"></script>
+</head>
+<body class="sea-background">
+    <!-- кнопка "на главную" в правом верхнем углу -->
+    <a href="/" class="btn top-right">🏠 На главную</a>
+
+    <div class="container">
+        <h1 class="title">Меню игры</h1>
+        <div class="menu-buttons">
+            <!-- кнопка по сети -->
+            <a href="/game" class="btn">🎮 Играть по сети</a>
+
+            <!-- кнопка с другом -->
+            <button id="play-friend" class="btn">🤝 Играть с другом</button>
+        </div>
+
+        <!-- модальное окно для ввода кода игры -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Создайте код игры</h2>
+                <input id="game-code" type="text" maxlength="5" placeholder="ABCDE">
+                <button id="create-game" class="btn">Создать</button>
+                <button id="close-modal" class="btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
